@@ -9,20 +9,19 @@ int main(int argc, char **argv) {
         printf("Usage: mvm <filename.mbc> | --version\n");
         return 1;
     }
-
+    
     if ((strcmp(argv[1], "--version") == 0) || (strcmp(argv[1], "-v") == 0)) {
         printf("Maple version %s\n", MAPLE_VERSION);
         return 0;
     }
-
+    
     MapleEngine *engine = maple_create();
-    if (engine == NULL) {
+    if (!engine) {
         fprintf(stderr, "Error: Unable to initialize Maple engine.\n");
         return 1;
     }
-
+    
     maple_run(engine, argv[1]);
     maple_destroy(engine);
-
     return 0;
 }
