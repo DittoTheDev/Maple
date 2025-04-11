@@ -1,15 +1,15 @@
-#ifndef MAPLE_ENGINE_H
-#define MAPLE_ENGINE_H
+#ifndef ENGINE_H
+#define ENGINE_H
 
-#include "bytecode.h"
-#include "runtime.h"
+typedef struct MapleEngine MapleEngine;
 
-typedef struct {
-    MVM *vm;
-} MapleEngine;
+// Create a new Maple engine instance.
+MapleEngine* maple_create();
 
-MapleEngine *maple_create();
-void maple_run(MapleEngine *engine, const char *filename);
+// Destroy and clean up the engine.
 void maple_destroy(MapleEngine *engine);
 
-#endif
+// Run the given bytecode file.
+void maple_run(MapleEngine *engine, const char* filename);
+
+#endif // ENGINE_H
