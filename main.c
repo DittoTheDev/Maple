@@ -2,7 +2,7 @@
 #include <string.h>
 #include "engine/engine.h"
 
-#define MAPLE_VERSION "1.1 Beta"
+#define MAPLE_VERSION "1.1"
 
 int main(int argc, char **argv) {
     if (argc < 2) {
@@ -18,12 +18,11 @@ int main(int argc, char **argv) {
 
     MapleEngine *engine = maple_create();
     if (engine == NULL) {
-        fprintf(stderr, "Error: Failed to initialize the Maple engine.\n");
+        fprintf(stderr, "Error: Unable to initialize Maple engine.\n");
         return 1;
     }
 
     maple_run(engine, argv[1]);
     maple_destroy(engine);
-
     return 0;
 }
