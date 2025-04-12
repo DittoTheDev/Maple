@@ -1,0 +1,20 @@
+# Build directories
+/build/
+/bin/
+/CMakeFiles/
+/CMakeCache.txt
+/*.cmake
+
+# Object files and plugins
+*.o
+*.obj
+*.plugin
+
+# Executables
+maple.exe
+mvm.exe
+maple
+mvm
+
+# IDE / Editor
+.vscode/
