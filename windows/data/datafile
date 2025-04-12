@@ -1,0 +1,4 @@
+%define MAPLE_CMD      maple
+%define MVM_CMD        mvm
+%define MAPLE_VERSION  1.2
+%define PLUGIN_DIR     ../plugins
