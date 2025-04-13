@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(MapleSuite)
+project(MapleSuite C)
 
 # Put all executables into build/bin/
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
