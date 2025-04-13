@@ -10,12 +10,14 @@ typedef enum {
     AST_CALL_EXPR,
     AST_BINARY_EXPR,
     AST_LITERAL,
-    AST_IDENTIFIER
+    AST_IDENTIFIER,
+    AST_VAR_DECL,      // New: variable declaration (e.g., "var x = expr")
+    AST_ASSIGNMENT     // New: assignment (e.g., "x = expr")
 } ASTNodeType;
 
 typedef struct ASTNode {
     ASTNodeType type;
-    char *value;
+    char *value;  // For identifiers, operator symbols, or variable names
     struct ASTNode **children;
     int child_count;
 } ASTNode;
